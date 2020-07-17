@@ -1,0 +1,26 @@
+1. Random Access Machine: sort of assembly programming model - has registers, words (w bits) and access in O(1)
+   load, store or do computations all in O(1)
+2. Pointer Machine: sort of object programming model - an object with O(1) fields
+   Fields can be words or pointers (or references)
+   This model can be implemented in the RAM - so that one's more broad, powerful
+3. Python Model:
+   Cost of operations (not an exhaustive list):
+   Lists (or arrays):
+       List[i] access is O(1) (not really linked lists which would have been O(n))
+       Accessing attributes of an object is for the most part O(1)
+       List.append(x) is (achieved by table doubling) ~O(1)
+       Concatenate two lists (non-destructive) O(1 + n + m)
+       The in keyword is O(n)
+       Length of a list is O(1) because there is a built-in counter - otherwise would have to be O(n)
+       Sort a list is O(nlogn) - uses a comparison sort
+   Dictionaries (they are in a sense, generalizations of Lists):
+       Accessing a value Dict[key] = value is O(1) with a high probability - uses a hashtable - assumes a word size key
+   Longs:
+       word of x and y can be added in O(|x|+|y|)
+       multiply is O((|x|+|y|)^lg3) - sort of less than squared - lg 3 ~ 1.6
+   #More in the online notes and in recitation
+       
+       
+       
+       
+       
